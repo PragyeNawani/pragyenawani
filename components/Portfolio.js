@@ -759,7 +759,7 @@ const AboutSection = () => {
       className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden relative"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.05),transparent_50%)]" />
-      
+
       <div className="container mx-auto px-6 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content section */}
@@ -945,9 +945,8 @@ const Enhanced3DSkillsBlock = ({ className = "" }) => {
 
                     {/* Skills Grid - Simplified animations */}
                     <div className="flex-1 overflow-y-auto pb-2">
-                      <div className={`grid gap-2 sm:gap-3 ${
-                        currentData.content.length > 6 ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-2" : "grid-cols-2"
-                      }`}>
+                      <div className={`grid gap-2 sm:gap-3 ${currentData.content.length > 6 ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-2" : "grid-cols-2"
+                        }`}>
                         {currentData.content.map((skill, index) => (
                           <motion.div
                             key={`${currentFace}-${index}`}
@@ -1001,9 +1000,8 @@ const Enhanced3DSkillsBlock = ({ className = "" }) => {
                     setCurrentFace(index);
                     setTimeLeft(5);
                   }}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    currentFace === index ? "bg-white w-6" : "bg-white/40"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${currentFace === index ? "bg-white w-6" : "bg-white/40"
+                    }`}
                 />
               ))}
             </div>
@@ -2071,9 +2069,19 @@ const ModernContactForm = ({ isInView = true }) => {
 };
 
 const CTASection = () => {
+  const [activeSection, setActiveSection] = useState("Home");
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId.toLowerCase());
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+    }
+  };
   return (
     <section
       ref={ref}
@@ -2166,6 +2174,7 @@ const CTASection = () => {
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => { scrollToSection("home") }}
               >
                 View Portfolio
               </motion.button>
@@ -2198,7 +2207,17 @@ const FAQSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
   const [expandedFAQ, setExpandedFAQ] = useState(0); // First FAQ expanded by default
+  const [activeSection, setActiveSection] = useState("Home");
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId.toLowerCase());
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+    }
+  };
   const faqs = [
     {
       id: 1,
@@ -2417,6 +2436,7 @@ const FAQSection = () => {
               boxShadow: "0 20px 40px rgba(147, 51, 234, 0.3)",
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => { scrollToSection("contact") }}
           >
             <span>Get in Touch</span>
             <ChevronRight className="w-5 h-5" />

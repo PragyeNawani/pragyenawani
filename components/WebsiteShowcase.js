@@ -6,7 +6,7 @@ const WebsiteShowcase = () => {
 
   const designs = [
     {
-      id: 3,
+      id: 1,
       title: "Pragye Nawani - Web Dev Portfolio",
       category: "portfolio",
       description: "Interactive, attractive, responsive portfolio with AI chat",
@@ -16,7 +16,7 @@ const WebsiteShowcase = () => {
       project_url: 'https://pragyenawani.vercel.app'
     },
     {
-      id: 6,
+      id: 2,
       title: "Soloistanjali - Music Learning",
       category: "education",
       description: "User-friendly music learning platform with CMS and payment gateway",
@@ -25,8 +25,18 @@ const WebsiteShowcase = () => {
       tags: ["Blog", "E-commerce", "Marketing","Education"],
       project_url: 'https://www.soloistanjali.com'
     },
+    {
+      id: 3,
+      title: "FitLife - Fitness Freaks",
+      category: "fitness",
+      description: "Frontend design for a gym, UI/UX design only, interactive and attractive design for a fitness academy",
+      image: "fitlife.png",
+      color: "from-purple-500 to-indigo-500",
+      tags: ["FrontEnd", "Design", "UI/UX"],
+      project_url: 'https://pragyenawani.github.io/Fitlife/'
+    },
   ];
-
+  
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'ecommerce', name: 'E-commerce' },
