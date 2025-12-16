@@ -41,6 +41,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import WebsiteShowcase from "./WebsiteShowcase";
+import VideosShowcase from "./VideosShowcase";
 // Header Component
 const Header = () => {
   const [activeSection, setActiveSection] = useState("Home");
@@ -1408,7 +1409,7 @@ const ApproachSection = () => {
       number: 1,
       title: "Discovery",
       description:
-        "During the discovery phase, we engage in a comprehensive analysis of your business, your target market, and competitive landscape to create a strategic foundation.",
+        "During the discovery phase, I engage in a comprehensive analysis of your business, your target market, and competitive landscape to create a strategic foundation.",
       subtitle: "Understand Your Goals",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=top",
@@ -1419,7 +1420,7 @@ const ApproachSection = () => {
       number: 2,
       title: "Design & Development",
       description:
-        "Our team of skilled designers and developers work collaboratively to bring your vision to life with cutting-edge technologies and user-centered design principles.",
+        "I work collaboratively to bring your vision to life with cutting-edge technologies and user-centered design principles.",
       subtitle: "Iterative Approach",
       image:
         "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=400&h=300&fit=crop&crop=center",
@@ -1430,7 +1431,7 @@ const ApproachSection = () => {
       number: 3,
       title: "Launch & Optimization",
       description:
-        "Once your website is ready, we ensure a seamless launch and provide ongoing optimization to maximize performance and user engagement.",
+        "Once your website is ready, I ensure a seamless launch and provide ongoing optimization to maximize performance and user engagement.",
       subtitle: "Measure & Optimize",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
@@ -1496,11 +1497,11 @@ const ApproachSection = () => {
           </motion.div>
 
           <h2 className="text-6xl md:text-7xl font-light mb-8 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-            Our Approach
+            My Approach
           </h2>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-            At our agency, we believe that a collaborative and strategic
-            approach is the key to successful web development projects. We work
+            I believe that a collaborative and strategic
+            approach is the key to successful web development projects. I work
             closely with our clients to understand their goals and deliver
             exceptional results.
           </p>
@@ -1623,18 +1624,18 @@ const ModernContactForm = ({ isInView = true }) => {
   ];
 
   const budgetRanges = [
-    { value: "25", label: "Under $25" },
-    { value: "25-75", label: "$25 - $75" },
-    { value: "75-150", label: "$75 - $150" },
-    { value: "150-plus", label: "$150+" },
+    { value: "250", label: "Under $250" },
+    { value: "250-450", label: "$250 - $450" },
+    { value: "450-650", label: "$450 - $650" },
+    { value: "650-plus", label: "$650+" },
     { value: "discuss", label: "Let's Discuss" },
   ];
 
   const timelineOptions = [
     { value: "asap", label: "ASAP" },
-    { value: "3-days", label: "Within 3 Days" },
-    { value: "5-7-days", label: "5-7 Days" },
+    { value: "5-days", label: "Within 5 Days" },
     { value: "7-14-days", label: "7-14 Days" },
+    { value: "14-21-days", label: "14-21 Days" },
     { value: "flexible", label: "Flexible Timeline" },
   ];
 
@@ -2957,6 +2958,7 @@ export default function CodexPortfolio() {
       <Header />
       <HeroSection />
       <WebsiteShowcase />
+      <VideosShowcase />
       <AboutSection />
       <SkillsSection />
       <FeaturedProjectsSection />
